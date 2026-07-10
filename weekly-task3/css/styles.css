@@ -1,0 +1,539 @@
+
+/* ------------------------------------------------------------------
+   1) COLOR VARIABLES
+   Defining brand colors once as CSS variables means we only have to
+   update a color in one place if the palette ever changes.
+   ------------------------------------------------------------------ */
+:root{
+  --mc-teal-dark: #0c3b3f;     /* Used for dark badges/tags */
+  --mc-teal-darker: #0a2f32;   /* Used for full dark sections (steps band, footer) */
+  --mc-coral: #f2795e;         /* Primary accent / CTA color */
+  --mc-coral-dark: #e5654a;    /* Darker coral, used only for hover text-color swaps (no motion) */
+  --mc-bg-soft: #f7f8f9;       /* Light grey section background */
+  --mc-text-muted: #6b7280;    /* Muted paragraph text */
+  --mc-border: #e8eaed;        /* Default light border color */
+}
+
+
+/* ------------------------------------------------------------------
+   2) BASE / TYPOGRAPHY
+   Using a system font stack (no external font files needed), so the
+   page renders correctly even completely offline.
+   ------------------------------------------------------------------ */
+body{
+  font-family: "Trebuchet MS", "Segoe UI", Verdana, Geneva, sans-serif;
+  color: #1b2430;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------------
+   3) NAVBAR
+   ------------------------------------------------------------------ */
+.navbar-brand{
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #1b2430 !important;
+}
+
+/* Small square "M" logo mark next to the brand name */
+.icon-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--mc-coral);
+  color: #fff;
+  border-radius: 8px;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.nav-link{
+  color: #4b5563 !important;
+  font-weight: 500;
+}
+
+/* Highlights the current page's nav link (Faq, in this design) */
+.nav-link.active{
+  color: var(--mc-coral) !important;
+}
+
+
+/* ------------------------------------------------------------------
+   4) BUTTONS
+   Custom button styles that coexist with Bootstrap's .btn class.
+   ------------------------------------------------------------------ */
+.btn-coral{
+  background: var(--mc-coral);
+  border-color: var(--mc-coral);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+}
+/* Hover only changes color — no transform/scale, no transition timing */
+.btn-coral:hover{
+  background: var(--mc-coral-dark);
+  border-color: var(--mc-coral-dark);
+  color: #fff;
+}
+
+.btn-outline-pill{
+  border-radius: 8px;
+  border: 1px solid #d7dade;
+  color: #1b2430;
+  font-weight: 500;
+  background: #fff;
+}
+.btn-outline-pill:hover{
+  background: #f3f4f6;
+}
+
+
+/* ------------------------------------------------------------------
+   5) HERO SECTION
+   ------------------------------------------------------------------ */
+
+/* Small dark rounded pill above the headline ("HIPAA Compliant & Secure") */
+.badge-dark{
+  background: var(--mc-teal-dark);
+  color: #fff;
+  border-radius: 20px;
+  padding: .4rem 1rem;
+  font-size: .8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
+.badge-dark .dot{
+  width: 8px;
+  height: 8px;
+  background: #3ddc97;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero-section{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero-heading{
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: #12181f;
+}
+
+/* Limits the paragraph width so lines don't stretch too wide on large screens */
+.hero-desc{
+  max-width: 480px;
+}
+
+/* Circular soft-grey backdrop that the hero photo sits inside */
+.photo-wrap{
+  position: relative;
+}
+.photo-circle{
+  background: radial-gradient(circle at 50% 40%, #eef2f3 0%, #eef2f3 60%, transparent 61%);
+  border-radius: 50%;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.photo-circle img{
+  max-height: 105%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+/* The 3 small pill labels ("EHR", "Patients Experience", "Billing and Payments")
+   floating on top of the hero photo. Each specific position is set below. */
+.floating-tag{
+  position: absolute;
+  background: #fff;
+  padding: .5rem 1rem;
+  border-radius: 30px;
+  font-size: .8rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+  white-space: nowrap;
+}
+.floating-tag.dark{
+  background: var(--mc-teal-dark);
+  color: #fff;
+}
+.floating-tag.coral{
+  background: var(--mc-coral);
+  color: #fff;
+}
+.tag-ehr{ top: 8%; left: 10%; }
+.tag-patients{ top: 24%; right: -2%; }
+.tag-billing{ bottom: 30%; left: -2%; }
+
+
+/* ------------------------------------------------------------------
+   6) "TRUSTED BY" STRIP
+   ------------------------------------------------------------------ */
+.trusted-strip{
+  background: var(--mc-bg-soft);
+  padding: 2.5rem 0;
+}
+.trusted-caption{
+  font-size: .85rem;
+}
+.trusted-strip .logo-item{
+  font-weight: 700;
+  color: #9aa1ab;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  justify-content: center;
+}
+
+
+/* ------------------------------------------------------------------
+   7) SECTION HEADINGS (reused across Features, Steps, Pricing, FAQ...)
+   ------------------------------------------------------------------ */
+.section-title{
+  font-weight: 600;
+  font-size: 2rem;
+}
+.section-sub{
+  color: var(--mc-text-muted);
+}
+
+
+/* ------------------------------------------------------------------
+   8) FEATURE CARDS (the 6-card grid)
+   ------------------------------------------------------------------ */
+.feature-card{
+  background: var(--mc-bg-soft);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  border: 1px solid transparent;
+  /* No hover animation: card stays static, only used for spacing/box styling */
+}
+.feature-icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--mc-teal-dark);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .05);
+}
+.feature-card h5{
+  font-weight: 600;
+}
+.feature-card p{
+  color: var(--mc-text-muted);
+  font-size: .92rem;
+  margin-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------------
+   9) 3-STEP PROCESS BAND (dark full-width section)
+   ------------------------------------------------------------------ */
+.steps-section{
+  background: var(--mc-teal-darker);
+  color: #fff;
+  padding: 5rem 0;
+}
+.steps-caption{
+  color: #b7c4c5;
+}
+.step-circle{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--mc-teal-darker);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 1.25rem;
+}
+/* Step 3 is visually emphasized in the original design */
+.step-circle.active{
+  background: var(--mc-coral);
+  color: #fff;
+}
+.step-title{
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+.step-desc{
+  color: #a9b7b8;
+  font-size: .9rem;
+}
+
+
+/* ------------------------------------------------------------------
+   10) "CRYSTAL CLEAR CARE" VIDEO PANEL
+   ------------------------------------------------------------------ */
+.video-wrap{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.video-wrap img{
+  width: 100%;
+  display: block;
+}
+/* Row of 3 circular icons drawn over the bottom of the image (decorative only) */
+.video-controls{
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%); /* static centering, not an animation */
+  display: flex;
+  gap: 12px;
+}
+.video-controls .ctrl{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #12181f;
+}
+.video-controls .ctrl.end{
+  background: var(--mc-coral);
+  color: #fff;
+}
+
+/* Green checkmark list items ("4K Resolution Video Support", etc.) */
+.check-item{
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  margin-bottom: .6rem;
+}
+.check-item .chk{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #12a86a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .7rem;
+  flex-shrink: 0;
+  margin-top: .15rem;
+}
+
+
+/* ------------------------------------------------------------------
+   11) TESTIMONIALS
+   ------------------------------------------------------------------ */
+.testi-section{
+  background: var(--mc-bg-soft);
+  padding: 5rem 0;
+}
+.testi-card{
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+}
+.testi-card .quote-mark{
+  color: var(--mc-coral);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.testi-card .quote-text{
+  font-style: italic;
+  font-weight: 500;
+  color: #1b2430;
+}
+.testi-avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testi-role{
+  font-size: .8rem;
+}
+
+
+/* ------------------------------------------------------------------
+   12) PRICING CARDS
+   ------------------------------------------------------------------ */
+.pricing-card{
+  border-radius: 16px;
+  border: 1px solid var(--mc-border);
+  padding: 2rem;
+  height: 100%;
+  background: #fff;
+}
+/* Middle "Professional" plan: thicker coral border + soft coral shadow to stand out */
+.pricing-card.featured{
+  border: 2px solid var(--mc-coral);
+  position: relative;
+  box-shadow: 0 15px 35px rgba(242, 121, 94, .15);
+}
+/* "MOST POPULAR" ribbon sitting on the card's top edge */
+.pricing-card .badge-popular{
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%); /* static centering */
+  background: var(--mc-coral);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .35rem .9rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.pricing-card .plan-name{
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--mc-text-muted);
+}
+.pricing-card .plan-price{
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.pricing-card .plan-price small{
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--mc-text-muted);
+}
+.pricing-card ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+.pricing-card ul li{
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  margin-bottom: .6rem;
+  font-size: .92rem;
+}
+.pricing-card ul li i.bi-check-lg{ color: #12a86a; } /* green = included */
+.pricing-card ul li i.bi-x-lg{ color: #c94f4f; }     /* red = not included */
+.pricing-card.enterprise{
+  background: var(--mc-bg-soft);
+  border-color: transparent;
+}
+
+
+/* ------------------------------------------------------------------
+   13) FAQ / ACCORDION
+   ------------------------------------------------------------------ */
+.faq-section{
+  background: var(--mc-bg-soft);
+  padding: 5rem 0;
+}
+.accordion-button{
+  font-weight: 500;
+  border-radius: 10px !important;
+}
+/* Bootstrap adds a blue focus ring by default; we override it with our
+   own coral color and remove the box-shadow glow for a flatter look */
+.accordion-button:not(.collapsed){
+  color: var(--mc-coral);
+  background: #fff;
+  box-shadow: none;
+}
+.accordion-button:focus{
+  box-shadow: none;
+}
+.accordion-item{
+  border-radius: 10px !important;
+  margin-bottom: 1rem;
+  border: 1px solid var(--mc-border) !important;
+  overflow: hidden;
+}
+
+
+/* ------------------------------------------------------------------
+   14) FOOTER
+   ------------------------------------------------------------------ */
+footer{
+  background: var(--mc-teal-darker);
+  color: #c7d0d1;
+  padding-top: 4rem;
+}
+/* Re-use the same square "M" badge as the navbar, but on the coral color already
+   set inline via a utility class below — see .footer-badge */
+.footer-badge{
+  background: var(--mc-coral);
+}
+.footer-blurb{
+  font-size: .9rem;
+}
+footer h6{
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+footer a{
+  color: #a9b7b8;
+  text-decoration: none;
+  display: block;
+  margin-bottom: .6rem;
+  font-size: .92rem;
+}
+footer a:hover{
+  color: #fff;
+}
+.footer-bottom{
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  font-size: .85rem;
+  color: #8ea0a1;
+}
+/* Small green dot next to "System Status: Operational" */
+.status-dot{
+  width: 8px;
+  height: 8px;
+  background: #3ddc97;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+
+/* ------------------------------------------------------------------
+   15) RESPONSIVE ADJUSTMENTS (small screens)
+   ------------------------------------------------------------------ */
+@media (max-width: 767.98px){
+  .hero-heading{
+    font-size: 2.1rem;
+  }
+  .floating-tag{
+    font-size: .7rem;
+    padding: .35rem .7rem;
+  }
+}

@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCloud — Run Your Virtual Clinic Effortlessly</title>
+
+  <!-- Stylesheets: Bootstrap 5, icon font, custom styles (all local, offline-ready) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar: collapses behind hamburger below "lg" breakpoint -->
+  <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom">
+    <div class="container">
+
+      <!-- Logo / brand name -->
+      <a class="navbar-brand" href="#">
+        <span class="icon-badge">M</span>MediCloud
+      </a>
+
+      <!-- Hamburger button (mobile only), toggles #nav open/closed -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible area: nav links + CTA button -->
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">How It Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Faq</a></li>
+        </ul>
+        <button class="btn btn-coral px-4">Get a Demo</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero: headline/CTA on the left, photo + floating tags on the right -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Left column: heading, description, buttons -->
+        <div class="col-lg-6">
+          <span class="badge-dark mb-3">
+            <span class="dot"></span> HIPAA Compliant &amp; Secure
+          </span>
+          <h1 class="hero-heading mt-3 mb-3">Run Your Virtual Clinic Effortlessly</h1>
+          <p class="section-sub mb-4 hero-desc">
+            All-in-one telehealth platform designed for modern practices. Manage patients, clinical notes, and secure HD video consultations in one unified workspace.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <button class="btn btn-coral px-4 py-2">Get a Demo</button>
+            <button class="btn btn-outline-pill px-4 py-2">Take a Quick tour</button>
+          </div>
+        </div>
+
+        <!-- Right column: circular photo + floating tag labels -->
+        <div class="col-lg-6">
+          <div class="photo-wrap">
+            <div class="photo-circle">
+              <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?w=500&q=80&auto=format&fit=crop" alt="Nurse holding a stethoscope">
+            </div>
+            <!-- Tag positions set in styles.css -->
+            <span class="floating-tag dark tag-ehr"><i class="bi bi-clipboard2-pulse me-1"></i>EHR</span>
+            <span class="floating-tag coral tag-patients">Patients Experience</span>
+            <span class="floating-tag dark tag-billing"><i class="bi bi-credit-card me-1"></i>Billing and Payments</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted-by strip: caption left, placeholder logos right -->
+  <section class="trusted-strip">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-3">
+          <h6 class="fw-semibold mb-1">Trusted by</h6>
+          <p class="section-sub mb-0 trusted-caption">We safeguard your practice with full security and HIPAA compliance.</p>
+        </div>
+        <div class="col-lg-9">
+          <div class="row row-cols-2 row-cols-md-4 g-3">
+            <div class="col logo-item"><i class="bi bi-triangle-fill"></i> LOGOIPSUM</div>
+            <div class="col logo-item"><i class="bi bi-hexagon-fill"></i> LOGOIPSUM</div>
+            <div class="col logo-item"><i class="bi bi-suit-heart-fill"></i> LOGOIPSUM</div>
+            <div class="col logo-item"><i class="bi bi-asterisk"></i> Logoipsum</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features grid: 6 cards, 1/2/3 columns by screen size -->
+  <section class="py-5 mt-4">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Clinical Excellence Integrated</h2>
+        <p class="section-sub">Everything you need to provide top-tier care from anywhere in the world.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-camera-video"></i></div>
+            <h5>Video Consultations</h5>
+            <p>HD, peer-to-peer encrypted video calls with built-in waiting rooms and screen sharing.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-calendar-check"></i></div>
+            <h5>Scheduling</h5>
+            <p>Automated booking, timezone detection, and calendar sync with Google and Outlook.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+            <h5>Digital EHR</h5>
+            <p>Structured clinical notes, ICD-10 coding, and longitudinal patient health records.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-capsule"></i></div>
+            <h5>ePrescriptions</h5>
+            <p>Securely send prescriptions directly to pharmacies with automated interactions check.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-credit-card-2-front"></i></div>
+            <h5>Payments</h5>
+            <p>Integrated billing, insurance claims processing, and direct patient payments.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
+            <h5>Secure &amp; Compliant</h5>
+            <p>SOC2 Type II, HIPAA, and GDPR compliant with data residency options.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-step band: numbered circles, step 3 highlighted via .active -->
+  <section class="steps-section">
+    <div class="container text-center">
+      <h2 class="section-title">Get started with MediCloud in 3 easy steps</h2>
+      <p class="section-sub mb-5 steps-caption">Simple, supported, and designed to fit the way you work. From setup to go-live, we'll guide you every step so your practice sees value from day one.</p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="step-circle">1</div>
+          <div class="step-title">Sign Up</div>
+          <div class="step-desc">Create your provider profile and customize your clinic branding.</div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-circle">2</div>
+          <div class="step-title">Add Staff</div>
+          <div class="step-desc">Invite your team of doctors, specialists, and front-desk admins.</div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-circle active">3</div>
+          <div class="step-title">Start Consults</div>
+          <div class="step-desc">Begin hosting secure consultations and managing patient care.</div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 mt-5 flex-wrap">
+        <button class="btn btn-coral px-4 py-2">Get a Demo</button>
+        <button class="btn btn-light px-4 py-2">Take a Quick tour</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video preview + feature checklist -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <div class="video-wrap">
+            <img src="https://images.unsplash.com/photo-1758691461932-d0aa0ebf6b31?w=700&q=80&auto=format&fit=crop" alt="Doctor consulting a patient via video call">
+            <!-- Decorative icons only -->
+            <div class="video-controls">
+              <span class="ctrl"><i class="bi bi-mic"></i></span>
+              <span class="ctrl"><i class="bi bi-camera-video"></i></span>
+              <span class="ctrl end"><i class="bi bi-telephone-fill"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Crystal Clear Care</h2>
+          <p class="section-sub mb-4">Experience zero-latency video consultations designed for clinical accuracy. Share medical records and record sessions with one click.</p>
+
+          <div class="check-item">
+            <span class="chk"><i class="bi bi-check-lg"></i></span> 4K Resolution Video Support
+          </div>
+          <div class="check-item">
+            <span class="chk"><i class="bi bi-check-lg"></i></span> Built-in AI Scribe for clinical notes
+          </div>
+          <div class="check-item">
+            <span class="chk"><i class="bi bi-check-lg"></i></span> Integrated vitals monitoring
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 testimonial cards -->
+  <section class="testi-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">What success looks like with Tebra</h2>
+        <p class="section-sub">Our clients don't just work with us, they grow with us. Here's what a few of our satisfied customers had to say about their experience with MediCloud.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="testi-card">
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-text">MediCloud transformed how I manage my pediatric practice. The patient experience is seamless, and my no-show rates dropped by 40%.</p>
+            <div class="d-flex align-items-center gap-2 mt-4">
+              <img class="testi-avatar" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&q=80&auto=format&fit=crop" alt="Dr. Sarah Jenkins">
+              <div>
+                <div class="fw-semibold">Dr. Sarah Jenkins</div>
+                <div class="text-muted testi-role">Pediatrician</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testi-card">
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-text">The HIPAA compliance and security were non-negotiable for my clinic. MediCloud delivered peace of mind and excellent UX.</p>
+            <div class="d-flex align-items-center gap-2 mt-4">
+              <img class="testi-avatar" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&q=80&auto=format&fit=crop" alt="Dr. Mark Thompson">
+              <div>
+                <div class="fw-semibold">Dr. Mark Thompson</div>
+                <div class="text-muted testi-role">Cardiologist</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testi-card">
+            <div class="quote-mark">&ldquo;</div>
+            <p class="quote-text">Scaling my mental health practice across state lines was only possible because of their robust licensing and scheduling tools.</p>
+            <div class="d-flex align-items-center gap-2 mt-4">
+              <img class="testi-avatar" src="https://images.unsplash.com/photo-1550831107-1553da8c8464?w=100&q=80&auto=format&fit=crop" alt="Dr. Elena Rodriguez">
+              <div>
+                <div class="fw-semibold">Dr. Elena Rodriguez</div>
+                <div class="text-muted testi-role">Psychiatrist</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing: 3 plans, middle one highlighted via .featured -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Flexible Plans for Every Scale</h2>
+        <p class="section-sub">Everything you need to provide top-tier care from anywhere in the world.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Starter plan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price mt-2">$49 <small>/mo</small></div>
+            <ul class="mt-4">
+              <li><i class="bi bi-check-lg"></i> 1 Provider</li>
+              <li><i class="bi bi-check-lg"></i> Unlimited Consultations</li>
+              <li><i class="bi bi-check-lg"></i> Basic EHR</li>
+              <li><i class="bi bi-x-lg"></i> AI Note Assistant</li>
+            </ul>
+            <button class="btn btn-outline-pill w-100 py-2">Select Plan</button>
+          </div>
+        </div>
+
+        <!-- Professional plan (highlighted) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card featured">
+            <span class="badge-popular">MOST POPULAR</span>
+            <div class="plan-name">Professional</div>
+            <div class="plan-price mt-2">$129 <small>/mo</small></div>
+            <ul class="mt-4">
+              <li><i class="bi bi-check-lg"></i> Up to 5 Providers</li>
+              <li><i class="bi bi-check-lg"></i> Full EHR &amp; ePrescriptions</li>
+              <li><i class="bi bi-check-lg"></i> Custom Branding</li>
+              <li><i class="bi bi-check-lg"></i> AI Clinical Assistant</li>
+            </ul>
+            <button class="btn btn-coral w-100 py-2">Get Started</button>
+          </div>
+        </div>
+
+        <!-- Enterprise plan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card enterprise">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-price mt-2">Custom</div>
+            <ul class="mt-4">
+              <li><i class="bi bi-check-lg"></i> Unlimited Providers</li>
+              <li><i class="bi bi-check-lg"></i> Dedicated Success Manager</li>
+              <li><i class="bi bi-check-lg"></i> API &amp; Webhook Access</li>
+              <li><i class="bi bi-check-lg"></i> On-Prem Data Hosting</li>
+            </ul>
+            <button class="btn btn-outline-pill w-100 py-2">Contact Sales</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ accordion (Bootstrap component) -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Simple, supported, and designed to fit the way you work. From setup to go-live, we'll guide you every step so your practice sees value from day one.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAcc">
+
+            <!-- FAQ 1: open by default -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  Is MediCloud HIPAA compliant?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                <div class="accordion-body text-muted">
+                  Yes. MediCloud is fully HIPAA, SOC2 Type II, and GDPR compliant, with encrypted data storage and configurable data residency options.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  Do patients need to download an app?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body text-muted">
+                  No. Patients can join consultations directly from their browser on any device, with no downloads required.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  How does billing and payment work?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body text-muted">
+                  MediCloud handles direct patient payments, insurance claims processing, and integrated billing so you get paid faster.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  Can I integrate my current EHR?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                <div class="accordion-body text-muted">
+                  Yes, MediCloud supports integrations with most major EHR systems through our API and webhook access on Enterprise plans.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer: brand blurb, 3 link lists, bottom bar -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+          <h5 class="text-white fw-semibold mb-3">
+            <span class="icon-badge footer-badge">M</span>MediCloud
+          </h5>
+          <p class="footer-blurb">Empowering healthcare providers with modern, secure, and intuitive digital clinic tools.</p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6>Product</h6>
+          <a href="#">Telehealth Video</a>
+          <a href="#">Patient Portal</a>
+          <a href="#">Smart Billing</a>
+          <a href="#">ePrescriptions</a>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Press Kit</a>
+          <a href="#">Security</a>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h6>Legal</h6>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">HIPAA Compliance</a>
+          <a href="#">GDPR</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>
+          © 2026 MediCloud. HIPAA Compliant &amp; Secure.
+          <br class="d-md-none">
+          All rights reserved by <strong>Codescandy</strong> · Distributed by <strong>ThemeWagon</strong>
+        </div>
+        <div><span class="status-dot"></span>System Status: <strong>Operational</strong></div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (bundled w/ Popper), required for navbar + accordion -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
